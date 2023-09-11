@@ -1,0 +1,23 @@
+﻿@model ProdutoModel
+@{
+    ViewData["Title"] = "Atualizar Produto";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Atualizar">
+
+    <input type="hidden" asp-for="@Model.Id" />
+
+    <div class="form-floating mt-5">
+        <input asp-for="@Model.NomeProduto" class="form-control text-bold" required placeholder=" ">
+        <label class="form-label text-gray">Nome do Produto</label>
+    </div>
+
+
+    <div class="mt-5">
+        <a asp-action="Listagem" class="btn btn-secondary">Cancelar</a>
+        <button type="submit" class="btn btn-success">Salvar</button>
+    </div>
+
+</form>
